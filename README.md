@@ -7,7 +7,7 @@ ___
 ## :point_right: O que vi neste projeto:
 
 * Estudo básico sobre o funcionamento da JPA. Criação de um projeto com Maven adicionando o Hibernate como uma dependência `hibernate-entitymanager`.
-Também foi utilizado a dependência do banco de dados local com o uso do _H2_.
+Também foi utilizado a dependência do banco de dados em memória com o uso do _H2_.
 
 * Crianção do arquivo `persistence.xml`, entendimento de como funcionam as tags do `persistence-unit`, as propriedades - properties - da JPA e as propriedades específicas do Hibernate. 
 
