@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.2"
+             xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"> <!--cabeçalho padrão JPA -->
+
+
+    <persistence-unit name="loja" transaction-type="RESOURCE_LOCAL"> <!--tag serve para agrupar as configurações de uma unidade de persistência,
+        que representa um banco de dados utilizado pela aplicação. Aqui foi usado o do projeto, mas pode variar -->
+
+        <properties>
+            <!--principais configurações para gerar uma conexão da JPA com o banco de dados do projeto -->
+            <property name="jakarta.persistence.jdbc.driver" value="org.h2.Driver"/> <!-- esta linha diz qual a classe e qual é o driver, muda de banco de dado, para banco de dados. -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:h2:mem:loja"/> <!-- urls do banco de dados -->
+            <property name="jakarta.persistence.jdbc.user" value="sa"/> <!-- usuário banco de dados -->
+            <property name="jakarta.persistence.jdbc.password" value=""/> <!-- senha - aqui é definido conforme especificações do banco de dados a ser utilizado -->
+
+            <!--Propriedades especificas do hibernate -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.H2Dialect"/> <!-- para o hibernate saber o dialeto do banco de dados, as particularidades do BD.
+            essa config. pode variar dependendo do BD utilizado. -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/> <!-- para o hibernate criar a tabela no BD caso ela não exista -->
+            
+        </properties>
+    </persistence-unit>
+
+</persistence>
+
